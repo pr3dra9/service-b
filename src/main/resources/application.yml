@@ -1,0 +1,15 @@
+## YAML Template.
+---
+spring:
+  application.name: service-b
+  config.import: "optional:configserver:"
+  cloud:
+    config.uri: http://localhost:8888
+ 
+---
+spring:
+  config:
+    activate.on-profile: docker
+    import: "configserver:"
+  cloud:
+    config.uri: http://config:8080

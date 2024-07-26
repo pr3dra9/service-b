@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import rs.ac.bg.fon.mas.service_b.model.A1Dto;
-import rs.ac.bg.fon.mas.service_b.model.A2Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A1Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A2Dto;
 import rs.ac.bg.fon.mas.service_b.service.B1Service;
 import rs.ac.bg.fon.mas.service_b.service.B2Service;
 

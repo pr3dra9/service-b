@@ -7,7 +7,7 @@ package rs.ac.bg.fon.mas.service_b.config;
 import java.util.function.Consumer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import rs.ac.bg.fon.mas.service_b.model.A2Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A2Dto;
 
 /**
  *
@@ -17,32 +17,22 @@ import rs.ac.bg.fon.mas.service_b.model.A2Dto;
 public class StreamConfig {
 
     @Bean
-    public Consumer<A2Dto> consumeMessage() {
-        return a2 -> System.out.println("Primljena je poruka iz a2 kanala!!!" 
-                + " ID: " + a2.getId()
-                + " Name: " + a2.getName()
-                + " IsActive: " + a2.isActive()
-                + " Code: " + a2.getCode()
-                + "."
-        );
-    }
-    @Bean
     public Consumer<A2Dto> consumeCreateA2Message() {
         return a2 -> System.out.println("A2 Created -" + 
-                " ID: " + a2.getId() + 
-                " Name: " + a2.getName() +
-                " Active: " + a2.isActive() + 
-                " Code: " + a2.getCode() + 
+                " ID: " + a2.id() + 
+                " Name: " + a2.name() +
+                " Active: " + a2.active() + 
+                " Code: " + a2.code() + 
                 ".");
     }
   
     @Bean
     public Consumer<A2Dto> consumeUpdateA2Message() {
-        return a2 -> System.out.println("A2 Created -" + 
-                " ID: " + a2.getId() + 
-                " Name: " + a2.getName() +
-                " Active: " + a2.isActive() + 
-                " Code: " + a2.getCode() + 
+        return a2 -> System.out.println("A2 Updated -" + 
+                " ID: " + a2.id() + 
+                " Name: " + a2.name() +
+                " Active: " + a2.active() + 
+                " Code: " + a2.code() + 
                 ".");
     }
     

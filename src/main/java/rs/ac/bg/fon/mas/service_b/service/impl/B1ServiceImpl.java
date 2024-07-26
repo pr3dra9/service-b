@@ -7,7 +7,7 @@ package rs.ac.bg.fon.mas.service_b.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rs.ac.bg.fon.mas.service_b.client.ExternalServiceAClient;
-import rs.ac.bg.fon.mas.service_b.model.A1Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A1Dto;
 import rs.ac.bg.fon.mas.service_b.service.B1Service;
 
 /**

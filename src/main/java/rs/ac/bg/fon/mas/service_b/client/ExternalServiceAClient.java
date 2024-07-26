@@ -4,7 +4,7 @@
  */
 package rs.ac.bg.fon.mas.service_b.client;
 
-import rs.ac.bg.fon.mas.service_b.model.A1Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A1Dto;
 
 /**
  *

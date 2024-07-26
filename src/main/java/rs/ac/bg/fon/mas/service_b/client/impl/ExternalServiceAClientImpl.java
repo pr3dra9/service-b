@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import rs.ac.bg.fon.mas.service_b.client.ExternalServiceAClient;
-import rs.ac.bg.fon.mas.service_b.model.A1Dto;
+import rs.ac.bg.fon.mas.service_b.dto.A1Dto;
 
 /**
  *
@@ -22,14 +22,14 @@ import rs.ac.bg.fon.mas.service_b.model.A1Dto;
 public class ExternalServiceAClientImpl implements ExternalServiceAClient{
     
     private final RestTemplate restTemplate;
-    private final String aServiceUrl;
+    //private final String aServiceUrl;
     
     @Autowired
-    public ExternalServiceAClientImpl(RestTemplate restTemplate,
-            @Value("${app.a-service.host:localhost}") String aServiceHost,
-            @Value("${app.a-service.port:81}") String aServicePort) {
+    public ExternalServiceAClientImpl(RestTemplate restTemplate
+            /*,@Value("${app.a-service.host:localhost}") String aServiceHost*/
+            /*,@Value("${app.a-service.port:81}") String aServicePort*/) {
         this.restTemplate = restTemplate;
-        this.aServiceUrl = "http://" + aServiceHost + ":" + aServicePort + "/a1/";
+        //this.aServiceUrl = "http://" + aServiceHost + ":" + aServicePort + "/a1/";
     }
     
     @Override

@@ -27,13 +27,10 @@ import rs.ac.bg.fon.mas.service_b.service.B2Service;
  */
 @RestController
 @RequestMapping("")
-public class ServiceBController {
+public class A1Controller {
     
     @Autowired
     private B1Service service;
-    
-    @Autowired
-    private B2Service b2service;
     
     @GetMapping("service-a/a1/{id}")
     public @ResponseBody ResponseEntity<A1Dto> getA1(@PathVariable Long id) {
@@ -41,24 +38,6 @@ public class ServiceBController {
       if (res == null)
           return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
       return ResponseEntity.status(HttpStatus.OK).body(res);
-    }
-    
-    @PostMapping(value="service-a/a2")
-    public @ResponseBody ResponseEntity<Void> create(@RequestBody A2Dto a2) {
-        b2service.create(a2);
-        return ResponseEntity.accepted().build();
-    }
-    
-    @PutMapping(value="service-a/a2")
-    public @ResponseBody ResponseEntity<Void> update(@RequestBody A2Dto a2) {
-        b2service.update(a2);
-        return ResponseEntity.accepted().build();
-    }
-    
-    @DeleteMapping(value="service-a/a2/{id}")
-    public @ResponseBody ResponseEntity<Void> update(@PathVariable Long id) {
-        b2service.delete(id);
-        return ResponseEntity.accepted().build();
     }
     
 }
